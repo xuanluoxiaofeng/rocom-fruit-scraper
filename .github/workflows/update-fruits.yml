@@ -4,7 +4,7 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch:
 
-# 授予读写文件权限，解决推送403
+
 permissions:
   contents: write
 
@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        # 删除 persist-credentials: false，使用内置凭证
+
 
       - name: Set up Python
         uses: actions/setup-python@v4
